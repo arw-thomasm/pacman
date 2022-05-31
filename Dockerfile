@@ -8,7 +8,7 @@ FROM registry.access.redhat.com/ubi8/nginx-118
 #  ADD app-src /tmp/src
 #  RUN chown -R 1001:0 /tmp/src
 #  USER 1001
-ADD --chown 1001:0 . /tmp/src
+ADD --chown=1001:0 . /tmp/src
 
 # Let the assemble script to install the dependencies
 RUN /usr/libexec/s2i/assemble
